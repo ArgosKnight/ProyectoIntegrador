@@ -1,4 +1,4 @@
-package AlohaHome.alojacontroller;
+package AlohaHome.aloja.controller;
 
 
 import org.springframework.stereotype.Controller;
@@ -6,15 +6,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/aveces")
+
 public class ControllerBasic {
 
-	@GetMapping(path = {"/saludar","/hola"})
+	@RequestMapping("/")
 	public String index() {
 		return "index";
 	}
-	@GetMapping(path = {"/contact","/contacto"})
+	@RequestMapping("/property")
 	public String contact() {
-		return "contact";
+		return "property-grid";
+	}
+	@RequestMapping("/login")
+	public String login() {
+		return "login";
 	}
 }
