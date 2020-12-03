@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-
 public class ControllerBasic {
 
 	@RequestMapping("/")
@@ -20,5 +19,9 @@ public class ControllerBasic {
 	@RequestMapping("/login")
 	public String login() {
 		return "login";
+	}
+	@RequestMapping("/register")
+	public String register() {
+		return "register";
 	}
 }
