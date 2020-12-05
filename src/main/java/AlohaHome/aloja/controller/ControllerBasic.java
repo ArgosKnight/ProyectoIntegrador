@@ -16,7 +16,7 @@ public class ControllerBasic {
 	public String contact() {
 		return "property-grid";
 	}
-	@RequestMapping("/login")
+	@RequestMapping("/logina")
 	public String login() {
 		return "login";
 	}
