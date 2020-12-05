@@ -36,23 +36,32 @@
      	<div class="text">  
 			Registrar
 		</div>
-		<form>
+		<form th:action="@{/registration}"  method="post" th:object="${user}">
         	<div class="field">
           		<div class="fas fa-envelope">
 				</div>	
-				<input type="text" placeholder="Email or Phone">
+				<input id="firstName" class="form-control" th:field="*{firstName}" required autofocus="autofocus" />                     
         	</div>
+        	<div class="field">
+          		<div class="fas fa-envelope">
+				</div>	
+				<input id="lastName" class="form-control" th:field="*{lastName}" required autofocus="autofocus" />                      
+        	</div>
+        	<div class="field">
+          		<div class="fas fa-envelope">
+				</div>	
+				<input id="email" class="form-control" th:field="*{email}" required autofocus="autofocus" />                       
+        	</div>       	
 			<div class="field">
           		<div class="fas fa-lock">
 				</div>
-				<input type="password" placeholder="Password">
+				<input  type="password" id="password" class="form-control" placeholder="password" th:field="*{password}" required autofocus="autofocus" />
         	</div>
         	<button>Iniciar con google</button>
-			<button>Ingresar</button>
-        	<div class="link">
-         		 No tienes una cuentra
-         		 <a href="#">Registrate Ahora</a>
-        	</div>
+			<button type="submit" class="btn btn-success">Register</button>
+            <span>Already registered? 
+            	<a href="/" th:href="@{/login}">Login here</a>
+        	</span>
 		</form>
 	</div>
 	</div>

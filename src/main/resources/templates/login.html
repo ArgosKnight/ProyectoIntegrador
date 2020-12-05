@@ -36,24 +36,29 @@
      	<div class="text">  
 			LOGIN
 		</div>
-		<form>
+		<form  th:action="@{/login}" method="post">
+			<div th:if="${param.error}">
+    			<div class="alert alert-danger"> Invalid username or passorwd</div>
+    		</div>
+    		<div th:if="${param.Logout}">
+    			<div class="alert alert-info">You have been logged out.</div>
+    		</div>  
         	<div class="field">
           		<div class="fas fa-envelope">
 				</div>	
-				<input type="text" placeholder="Email or Phone">
+				<input type="text" class="form-control" id="username" name="username" placeholder="Enter Email ID" autofocus="autofocus">
         	</div>
 			<div class="field">
           		<div class="fas fa-lock">
 				</div>
-				<input type="password" placeholder="Password">
+				<input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" />
         	</div>
         	<button>Iniciar con google</button>
-			<button>Ingresar</button>
-        	<div class="link">
-         		 No tienes una cuentra
-         		 <a href="register">Registrate Ahora</a>
-        	</div>
+			<input type="submit" class="form-control btn btn-primary" id="login-submit" name="login-submit" value="Log In" />
 		</form>
+		<div class="form-group">
+    		<span> New user? <a href="/" th:href="@{/registration}">Register here</a> </span>
+    	</div>
 	</div>
 	</div>
 
