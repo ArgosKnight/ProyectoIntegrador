@@ -13,7 +13,7 @@ public class ControllerBasic {
 		return "index";
 	}
 	@RequestMapping("/property")
-	public String contact() {
+	public String propie() {
 		return "property-grid";
 	}
 	@RequestMapping("/login")
@@ -24,4 +24,19 @@ public class ControllerBasic {
 	public String register() {
 		return "register";
 	}
+	@RequestMapping("/about")
+	public String about() {
+		return "about";
+	}
+	
+	@RequestMapping("/contact")
+	public String contact() {
+		return "contacto";
+	}
+	
+	@RequestMapping("/perfil")
+	public String perfil() {
+		return "perfil";
+	}
+	
 }

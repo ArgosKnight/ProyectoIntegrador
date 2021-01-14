@@ -29,37 +29,22 @@
 </head>
 
 <body>
+
+	<!-- START NAV -->
 	<div th:include ="layout/navbar.html" th:remove="tag"> </div>
+	<!-- FINISH NAV -->
+	
+	
 	<div class="bg-image vamos" style=" height:800px ;background-image: url(img/slide-2.jpg)"><br><br><br>
-	<div class="login-form" >
- 		<br>
-     	<div class="text">  
-			Registrar
-		</div>
-		<form>
-        	<div class="field">
-          		<div class="fas fa-envelope">
-				</div>	
-				<input type="text" placeholder="Email or Phone">
-        	</div>
-			<div class="field">
-          		<div class="fas fa-lock">
-				</div>
-				<input type="password" placeholder="Password">
-        	</div>
-        	<button>Iniciar con google</button>
-			<button>Ingresar</button>
-        	<div class="link">
-         		 No tienes una cuentra
-         		 <a href="#">Registrate Ahora</a>
-        	</div>
-		</form>
-	</div>
+			<div class="login-form" >
+	 		<br>
+	     	<div class="text">Registrar</div>
+			<form>
+	        	<button>Iniciar con google</button>
+			</form>
+			</div>
 	</div>
 
-
-	
-	
   <!--/ footer Star /-->
 
   <div th:include ="layout/footer.html" th:remove="tag"> </div>
