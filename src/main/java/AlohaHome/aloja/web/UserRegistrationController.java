@@ -38,13 +38,7 @@ public class UserRegistrationController {
     	
         return "registration";
     }
-    /*
-    @GetMapping
-    public String showRegistrationForm(Model model) {
-    	model.addAttribute("user", new UserRegistrationDto());
-        return "registration";
-    }*/
-	
+
 	
     @PostMapping
     public String registerUserAccount(@ModelAttribute("user")UserRegistrationDto registrationDto) {

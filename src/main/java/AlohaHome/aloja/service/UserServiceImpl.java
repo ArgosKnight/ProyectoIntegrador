@@ -30,15 +30,7 @@ public class UserServiceImpl  implements UserService{
     	super();
     	this.userRepository=userRepository;
     }
-    public User save(UserRegistrationDto registrationDto) {
-    	/*
-        User user = new User();
-        user.setFirstName(registration.getFirstName());
-        user.setLastName(registration.getLastName());
-        user.setEmail(registration.getEmail());
-        user.setPassword(passwordEncoder.encode(registration.getPassword()));
-        user.setRoles(Arrays.asList(new Role("ROLE_USER")));*/
-    	
+    public User save(UserRegistrationDto registrationDto) {	
     	User user = new User(registrationDto.getFirstName(),
     			registrationDto.getLastName(),registrationDto.getEmail(),
     			passwordEncoder.encode(registrationDto.getPassword()), Arrays.asList(new Role("ROLE_USER")));

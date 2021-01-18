@@ -6,14 +6,9 @@ public class UserRegistrationDto {
 	private String lastName;
 	private String email;
 	private String password;
-	
-	
-	
-	
 	public UserRegistrationDto() {
 		super();
 	}
-
 	public UserRegistrationDto(String firstName, String lastName, String email, String password) {
 		super();
 		this.firstName = firstName;
@@ -53,7 +48,4 @@ public class UserRegistrationDto {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
 }
